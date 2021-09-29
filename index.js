@@ -122,5 +122,18 @@ function tsAverage(ts) {
     return sum/(ts.length)
 
 }
+a=2;
+b="4";
+function c(i){
+    i = 5
+}
+c(a);
 
-// console.log(tsAverage([3,4]));
+f=[];
+f.push(1);
+f.push(1);
+console.log(f.length)
+
+console.log("1"==1);
+a =new Array([1,3])
+console.log(true ==1)
