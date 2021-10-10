@@ -68,8 +68,12 @@ $x = foo(1,2,3);
 echo($x ?? 'x');
 
 
-$x = "Louis";
-$y = "Lou";
+// $x = "Louis";
+// $y = "Lou";
 
-echo $x ?? $y ?? "l";
-echo 19 <=> 020;
+// echo $x ?? $y ?? "l";
+// echo 19 <=> 020;
+
+// $s=1;
+
+// echo ++$s;

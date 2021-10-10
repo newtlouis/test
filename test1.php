@@ -82,5 +82,11 @@ $a =[];
 $a[10] ='ten';
 print_r($a);
 
-$b =1;
-echo $b++;
+
+
+
+$n=1;
+$n.=1;
+// echo $n;
+$encoded = md5('my test string');
+echo 0001 & 0001;
