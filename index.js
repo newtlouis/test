@@ -4,7 +4,7 @@ function plusMoins(nombreAleatoire, numbers) {
     res = (numbers < nombreAleatoire) ? "Plus" : "Moins";
     res = (numbers === nombreAleatoire) ? "Victoire" : res;
 
-    console.log(res);
+    return res
 }
 
 function findLargest(numbers) {
@@ -13,6 +13,66 @@ function findLargest(numbers) {
         largest = (number > largest) ? number : largest;
     }
     return largest;
+}
+
+function closestToZero(ts) {
+    let closest = ts[0];
+    ts.forEach(el => {
+        if(el !== closest){
+            closest = (Math.abs(closest) == Math.abs(el)) ? Math.abs(el) : closest;
+            closest = (Math.abs(closest) > Math.abs(el)) ? el : closest;
+        }
+    })
+    return closest;
+}
+
+function solve(clawPos, boxes, boxInClaw) {
+
+    if(!boxInClaw){
+        let high = boxes[0];
+        let poshigh =0;
+        for(let i = 0; i < boxes.length; i++){
+        if(boxes[i]>=high){
+            poshigh = i;
+            high = boxes[i];
+        }
+        }
+
+        if(clawPos == poshigh){
+            return 'PICK';
+        }
+
+        else if(clawPos > poshigh){
+            return 'LEFT';
+        }
+
+        else if(clawPos < poshigh){
+            return 'RIGHT';
+        }
+        
+    }
+    else{
+        let low = boxes[0];
+        let poslow =0;
+        for(let i = 0; i < boxes.length; i++){
+        if(boxes[i]<low){
+            poslow = i;
+            low = boxes[i];
+        }
+        }
+
+        if(clawPos == poslow){
+            return 'PLACE';
+        }
+
+        else if(clawPos > poslow){
+            return 'LEFT';
+        }
+
+        else if(clawPos < poslow){
+            return 'RIGHT';
+        }
+    }
 }
 
 // VALIDATE CITY

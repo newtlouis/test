@@ -8,38 +8,33 @@ div{
 .block_X{
     position: absolute;
     top: 30px;
+    right: 0px;
     background-color: rgb(224, 24, 58);
 }
 .block_X{
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
     background-color: rgb(206, 206, 195);
 }
+
 .block_X{
-    position: absolute;
-    top: 90px;
-    background-color: rgb(164, 32, 197);
-}
-.block_X{
-    position: absolute;
-    top: 120px;
+    position: relative;
+    width: 100px;
+    height: 100px;
     background-color: rgb(22, 143, 103);
 }
+
+
 .block_X{
-    position: absolute;
-    top: 150px;
-    background-color: rgb(194, 184, 41);
-}
-.block_X{
-    position: absolute;
-    top: 180px;
+    position: static;
     background-color: rgb(122, 55, 55);
 }
-
-.bloc_6{
-    color :blue;
+.block_X{
+    position: relative;
+    top: -38px;
+    left: 20px;
+    background-color: rgb(160, 140, 140);
 }
 
-h2{
-    color: red;
-}
+    
