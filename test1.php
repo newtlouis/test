@@ -78,15 +78,8 @@ $a= [4,10,-3];
 // echo closeeestToZero($a);
 
 
-$a =[];
-$a[10] ='ten';
-print_r($a);
 
 
 
-
-$n=1;
-$n.=1;
-// echo $n;
-$encoded = md5('my test string');
-echo 0001 & 0001;
+$string = "<a href='r&d'>R &amp; D</a>";
+echo htmlspecialchars($string, double_encode: false);
