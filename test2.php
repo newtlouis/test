@@ -3,4 +3,4 @@
     $a = array(“foo” => “bar”, array(“foobar” => “baz”));
     echo count($a, true);
 
-    $b=1;
+    $b=2;
