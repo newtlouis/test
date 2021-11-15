@@ -1,29 +1,21 @@
-﻿
 ﻿<?php
-	require_once('fonctions.php');
 
-	"CREATE TABLE arbre
-		(id   INTEGER NOT NULL,
-		idParent  INTEGER NOT NULL,
-		name VARCHAR(16) NOT NULL)
-
-		PRIMARY KEY (id),
-		FOREIGN KEY (ParentId) references arbre(id), 
-		";
-
-		While(isset($Parents))
-			$Parents = "SELECT * FROM arbre WHERE idParent == NULL";
-			foreach($Parents as $parent){
-				$Enfants = "SELECT * FROM arbre WHERE idParent == $Parent.id";
-			}
-
-			$Parents = $Enfants;
-
-		""
-		function get_enfant($idParent){
-			$enfants = "SELECT * FROM arbre WHERE arbre.idParent = $idParent";
-			foreach ($enfants as $enfant) {
-				$petitEnfant = get_enfant($enfant['id'])
-			# 
-			}
-		}
+function RemplacerDesLettres(string $mot) :string{
+    $res = "";
+    $voyelle = ['a','e','i','o','u'];
+    
+    for($i=0; $i<strlen($mot); $i++){
+     if(in_array($mot[$i], $voyelle)){
+         if($i>0 && !in_array($mot[$i-1], $voyelle)){
+            $res.= "ae";
+         }
+         else{
+             $res.= $mot[$i];
+         }
+     }
+     else{
+         $res.= $mot[$i];
+     }
+    }
+    return $res;
+}

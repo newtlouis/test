@@ -61,11 +61,11 @@ function test(?int $n)
 
 test(null);
 
-function foo(){
-   return array_sum(func_get_args());
-}
-$x = foo(1,2,3);
-echo($x ?? 'x');
+// function foo(){
+//    return array_sum(func_get_args());
+// }
+// $x = foo(1,2,3);
+// echo($x ?? 'x');
 
 
 // $x = "Louis";
